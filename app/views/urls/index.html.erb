@@ -1,0 +1,11 @@
+<%= form_for(@url, url: url_path) do |f| %>
+ <div><%= f.text_field 'link' %></div>
+
+
+  <div><%= f.submit 'Save' %></div>
+
+<% end -%>
+
+<% if @url_created %>
+	<%= show_url(@url_created.id) %>
+	<% end %>
